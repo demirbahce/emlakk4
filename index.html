@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demirbahçe Emlak</title>
+    <link rel="icon" href="logo.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #ffffff;
+        font-family: "Segoe UI", sans-serif;
+        color: #2c2c2c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      header {
+        text-align: center;
+        margin-top: 50px;
+        animation: fadeIn 2s ease;
+      }
+
+      .logo {
+        width: 120px;
+        animation: pulse 2.5s infinite;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        color: #ffc72c;
+        margin-top: 20px;
+      }
+
+      p.tagline {
+        font-size: 1rem;
+        margin-top: 10px;
+        color: #555;
+        animation: fadeIn 3s ease;
+      }
+
+      .menu {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        opacity: 0;
+        animation: slideIn 2s ease forwards;
+        animation-delay: 2s;
+      }
+
+      .menu button {
+        padding: 12px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        background-color: #ffc72c;
+        color: white;
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
+
+      footer {
+        margin-top: auto;
+        padding: 20px;
+        font-size: 0.85rem;
+        color: #999;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+        .menu button {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Demirbahçe Logo" class="logo" />
+      <h1>Demirbahçe Emlak</h1>
+      <p class="tagline">Yeni nesil emlak deneyimi yakında hizmetinizde!</p>
+    </header>
+
+    <div class="menu">
+      <button disabled>Kurumsal</button>
+      <button disabled>Hizmetlerimiz</button>
+      <button disabled>Portföy</button>
+      <button disabled>İletişim</button>
+    </div>
+
+    <footer>© 2025 Demirbahçe Emlak | Tüm Hakları Saklıdır</footer>
+  </body>
+</html>
